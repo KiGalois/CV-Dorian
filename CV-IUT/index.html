@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="icon" href="lettre_D.jpg" type="image/gif">
+    <title>CV Dorian</title>
+</head>
+
+<body class="body">
+    <div class="game" onclick="fermer2()">
+        <div class="fenetre" onmouseout="mouseout = 1;" onmouseover="mouseout = 0;">
+            <div class="croix"><img src="croix.png" onClick="fermer()"></img></div>
+            <div class="choix-jeu">
+                <div class="enigme" onclick="enigme()">
+                    <div class="affichage">
+                        <h2 class="etapes"> <span class="numero-etape">0</span>/3</h2>
+                    </div>
+                    <h1 class="title">Énigme</h1>
+                </div>
+                <div class="mini-jeu" onclick="jeu()">
+                    <div class="affichage">
+                        <h2>Best-Score : </h2>
+                        <h2 class="best-score-affiche">0</h2>
+                    </div>
+                    <h1 class="title">Jeux</h1>
+                </div>
+            </div>
+            <div id="enigme-1">
+                <div class="retour" onclick="back1()">
+                    <h2>BACK</h2>
+                </div>
+                <h1 class="indice" title="Fin révolution française" onclick="indice1()">I</h1>
+                <h3>Monarchie = surcôté</h3>
+                <h3 class="aide-1"></h3>
+                <div class="chiffres">
+                    <p class="b1 b" onclick="B1()">0</p>
+                    <p class="b2 b" onclick="B2()">0</p>
+                    <p class="b3 b" onclick="B3()">0</p>
+                    <p class="b4 b" onclick="B4()">0</p>
+                    <p class="b5 b" onclick="B5()">0</p>
+                    <p class="b6 b" onclick="B6()">0</p>
+                    <p class="b7 b" onclick="B7()">0</p>
+                    <p class="b8 b" onclick="B8()">0</p>
+                    <p class="b9 b" onclick="B9()">0</p>
+                    <p class="b10 b" onclick="B10()">0</p>
+                    <p class="b11 b" onclick="B11()">0</p>
+                </div>
+            </div>
+            <div id="enigme-2">
+                <div class="retour" onclick="back2()">
+                    <h2>BACK</h2>
+                </div>
+                <div class="infos">
+                    <h3>k + i = 20</h3>
+                    <h3>1/3 * i = 3</h3>
+                    <h3>n + i² = 95</h3>
+                    <h3>n - g = g</h3>
+                    <h2>k + i + n - g = ?</h2>
+                </div>
+                <div class="sollution">
+                    <div class="c1 code">
+                        <div class="fleche-haut fleche" onclick="plus_c1()"><img src="chevron-up-solid.svg"></div>
+                        <div class="affichage">
+                            <h1 class="code-1">0</h1>
+                        </div>
+                        <div class="fleche-bas fleche" onclick="moin_c1()"><img src="chevron-down-solid.svg"></div>
+                    </div>
+                    <div class="c2 code">
+                        <div class="fleche-haut fleche" onclick="plus_c2()"><img src="chevron-up-solid.svg"></div>
+                        <div class="affichage">
+                            <h1 class="code-2">0</h1>
+                        </div>
+                        <div class="fleche-bas fleche" onclick="moin_c2()"><img src="chevron-down-solid.svg"></div>
+                    </div>
+                    <div class="c3 code">
+                        <div class="fleche-haut fleche" onclick="plus_c3()"><img src="chevron-up-solid.svg"></div>
+                        <div class="affichage">
+                            <h1 class="code-3">0</h1>
+                        </div>
+                        <div class="fleche-bas fleche" onclick="moin_c3()"><img src="chevron-down-solid.svg"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="enigme-3">
+                <div class="retour" onclick="back4()">
+                    <h2>BACK</h2>
+                </div>
+                <div class="txt">
+                    <p>Mon premier est la onzième lettre de l'alphabet.</br>
+                        Mon second et mon troisième signifie "dedans" en anglais.</br>
+                        Mon dernier est situé à equi-distance dans l'alphabet de B et de L.</br>
+                        Mon tout est loin d'être n'importe qui.</p>
+                </div>
+                <div class="reponses">
+                    <h3>Une idée ?</h3>
+                    <input placeholder="..." type="text" name="commande" class="reponse_3" cols="100" maxlength="30"
+                        rows="1" onfocus="this.placeholder=''" onblur="this.placeholder='...'"
+                        autocomplete="off"></input>
+                </div>
+            </div>
+            <div id="bravo">
+                <div class="txt">
+                    <h2>Félicitation, vous avez terminé toutes les énigmes disponible pour le moment.
+                        </br></br></br>Je ne sais pas pour vous, mais ces énigmes n'était pas toute facile, donc Bravo !
+                    </h2>
+                </div>
+                <div class="suivant" onclick="fin()">
+                    <h1>Suivant</h1>
+                </div>
+            </div>
+            <div id="jeu">
+                <div class="instruction">
+                    <h3>Appuie sur la flèche du haut pour commencer</h3>
+                    </br>
+                    <p>Le jeu nécessite les touches directionnel "Q" (gauche) "D" (droite), et "Z" pour start /
+                        re-start.</p>
+                    </br>
+                    <p>La vitesse de jeu ira de plus en plus vite au file du temps.</p>
+                    </br>
+                    <p>Les risques de faire face a des bugs sont grand, désoler d'avance.</p>
+                </div>
+                <div class="bouttons">
+                    <div class="facile" onclick="facil()">
+                        <h2>Facile</h2>
+                    </div>
+                    <div class="moyen" onclick="moyen()">
+                        <h2>Moyen</h2>
+                    </div>
+                    <div class="dificile" onclick="dificile()">
+                        <h2>Dificile</h2>
+                    </div>
+                </div>
+                <div class="retour" onclick="back3()">
+                    <h2>BACK</h2>
+                </div>
+                <div class="zone-jeu">
+                    <h3 class="perdu">PERDU</h3>
+                    <div class="ligne-1 lignes">
+                        <div class="block-1 blocks"></div>
+                        <div class="block-1-2 blocks"></div>
+                    </div>
+                    <div class="ligne-2 lignes">
+                        <div class="block-2 blocks"></div>
+                        <div class="block-2-2 blocks"></div>
+                    </div>
+                    <div class="ligne-3 lignes">
+                        <div class="block-3 blocks"></div>
+                        <div class="block-3-2 blocks"></div>
+                    </div>
+                    <h1 class="player"></h1>
+                </div>
+                <div class="score">
+                    <h2 class="text_score">0</h2>
+                </div>
+                <div class="best-score">
+                    <h2 class="text_best-score">0</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="competence">
+        <div class="trop-petit">
+            <h1>La page est trop dé-zoomer, merci de re-zoomer. Vous n'y verez rien sinon.</h1>
+        </div>
+        <div class="haut-page">
+            <div class="nom">
+                <h2>Dorian</h2>
+                <p>Site CV / Motivation</p>
+            </div>
+        </div>
+        <div id="presentation">
+            <div class="bloc">
+                <div class="text">
+                    <h2 class="title">Présentation</h2>
+                    <p>Je m'appelle Dorian Faure, j'ai eu 17 ans en 2020. Je vis en Haute-Loire et suis en Terminale
+                        STI2D spécialité
+                        SIN.</br>et je souhaite faire de ma passion un métier.</p>
+                </div>
+                <img src="pp-siteweb.png" alt="" class="photo">
+            </div>
+        </div>
+        <div id="infos">
+            <div class="origine">
+                <h2 class="title">Mes origines</h2>
+                <div class="text">
+                    <p>Je suis né et j'ai grandi en Ardèche, lors de mes années de collège j'ai développé une admiration pour la
+                        programmation qui c'est
+                        ensuite transformé en passion.</br>Après avoir eu mon brevet j'ai déménagé en Haute-Loire, je
+                        suis rentré au Lycée
+                        Charles et Adrien Dupuy en filière générale pour ensuite partir en STI2D.</p>
+                </div>
+            </div>
+            <div class="programmation">
+                <h2 class="title">Pourquoi la programmation ?</h2>
+                <div class="text-2">
+                    <p>Lorsque j'ai appris tout ce qui était disponible de faire avec la programmation, que ça soit les
+                        jeux vidéos, les
+                        applications, les sites web et encore tant d'autres. C'est à ce moment-là que j'ai compris que
+                        je pouvais faire de cette
+                        admiration, un métier.</p>
+                </div>
+                <div class="text-3">
+                    <p>Donc pour répondre à "pourquoi la programmation ?".</br>La
+                        réponse est simple : </br>La programmation m'apporte de l'épanouissement.</p>
+                </div>
+            </div>
+            <div class="futur">
+                <h2 class="title">Des projets futurs ?</h2>
+                <div class="text">
+                    <p>Tout d'abord, je compte faire les études nécessaires pour plus tard avoir le plus de chance
+                        possible de faire le métier
+                        que je veux. J'aimerais faire de ma passion mon métier, on me demande souvent si je préfère
+                        programmer des sites web ou
+                        si je préfèrerais programmer des jeux. Mon but c'est qu'au moment ou je rends mon travail la
+                        personne face à moi sois
+                        surprise et trouve ça incroyable.</p>
+                </div>
+            </div>
+            <div class="xp">
+                <h2 class="title">Mes expériences professionnelles</h2>
+                <div class="text">
+                    <p>Je n'ai malheureusement pas eu beaucoup d'expérience professionnelle, je n'ai jamais eu de
+                        travail rémunéré.
+                        </br>J'ai bien entendu fait des stages en 4ème et en 3ème où j'ai pu découvrir pour la
+                        première fois le monde du
+                        travail. Encore une fois malheureusement pour moi je n'ai pas fait mes stages dans des domaines
+                        qui m'intéresser
+                        beaucoup, un stage chez un électricien et un chez un mécanicien. En 2020 la mairie de mon
+                        village m’a demandé de faire
+                        partie du conseil des jeunes, j'ai accepté et j'ai bien fait car cela m'apporte une expérience
+                        de gestion que je
+                        n'aurais pu connaître sinon.</p>
+                </div>
+            </div>
+            <div class="capa">
+                <div class="points-fort">
+                    <h2 class="title">
+                        Points Fort :
+                    </h2>
+                    <ul>
+                        <li><span>La Logique :</span> J'adore les maths, la physique, la mécanique et la
+                            programmation... Enfaite-j'ai toujours
+                            étais plutôt bon dans les domaines où la réflexion logique est nécessaire.</li>
+                        <li><span>La Passion : </span> Il m'arrive souvent de me passionner pour des sujets divers, bien
+                            entendu à échelle
+                            différente selon le sujet. Et lorsque j'ai un sujet qui me passionne vraiment beaucoup, il
+                            devient le principal sujet de mes pensées. Il m'arrive parfois de me passionner pour des
+                            programmes, je vois cela
+                            comme un point fort car il me permet de m'obstiné sur ces problèmes et de les résoudres.
+                        </li>
+                        <li><span>L'écoute / La mémoire :</span> Je suis fière d'avoir une bonne écoute, et de retenir
+                            ce qu'on
+                            m'apprend assez vite. Par exemple, lorsque je programme et que je rencontre un souci,
+                            une fois ce problème résolus je peux être sûr de ne plus refaire
+                            la même erreur. Je pense que mon écoute et ma mémoire me permettent au quoditient de
+                            m'améliorer dans mon travail.</li>
+                    </ul>
+                </div>
+                <div class="points-faible">
+                    <h2 class="title">
+                        Points Faible :
+                    </h2>
+                    <ul>
+                        <li><span>(Anciennement) Manque de Regularité :</span> Je m'étais rendu compte d'un manque de
+                            Régularité dans mon travail. Lorsque je commencer un projet j'avais des phases où
+                            je me donnais à fond dans mon projet, et d'autres où je
+                            n'arrivais pas à trouver la motivation. Pour remédier à cela je me suis forcé pendant un
+                            certain temps à travail tous les jours, même si je travailler moins par jour en travaillant
+                            tous les jours je finissais par fournir un travail plus important. Aujourd'hui je
+                            n'ai plus besoin de me forcer, travailler tous les jours est devenue une routine et rare
+                            sont les fois où je n'avance pas les soirs dans mes projets.</li>
+                        <li><span>Travail à plusieurs :</span> Je suis ce qu'on appelle plus couramment un Loup
+                            solitaire, j'aime travailler seul dans mon coin. Lorsque je dois travailler en groupe je finis souvent
+                            par faire mon truc de mon côté tandis que les autres travaillent du leur. Je vois cela certes
+                            comme un point négatif mais aussi comme un point positif, étant donné que ce défaut m’a permis
+                            de développer mon sens du travail je ne me repose donc pas sur les autres.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="skills">
+            <div class="click">
+                <img src="click.png">
+                <p>Clickez sur une carte ci-dessous</p>
+            </div>
+            <div class="cards">
+                <div class="containers">
+                    <div class="html-card" onclick="change_card()">
+                        <div class="circle_h"></i></div>
+                        <img src="html5-brands.svg" class="logo_1">
+                        <div class="title">
+                            <h2 class="title_h">HTML</h2>
+                        </div>
+                        <div class="descri">
+                            <p class="descri_h">Le language HTML est le premier language de programmation (même si il
+                                n'est pas reconnu comme tel) que j'ai appris dans
+                                le but de m'amuser avec. Je ne considère pas maitriser à 100% le HTML mais je le
+                                maitrise suffisament pour le web
+                                developpement vue que la majeur partie du web developpement est dû au CSS et JavaScript
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="containers">
+                    <div class="css-card" onclick="change_card()">
+                        <div class="circle_c"></div>
+                        <img src="css3-alt-brands.svg" class="logo_2">
+                        <div class="title">
+                            <h2 class="title_c">CSS</h2>
+                        </div>
+                        <div class="descri">
+                            <p class="descri_c">Le language CSS est lui le deuxième language de programmation (même si
+                                lui aussi n'est pas reconnu comme tel) que
+                                j'ai appris, je l'ai appris dans le but de complété le HTML que je connaissais déjà à ce
+                                moment là. Le language CSS reste simple même si très très utile.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="containers">
+                    <div class="js-card" onclick="change_card()">
+                        <div class="circle_j"></div>
+                        <img src="js-square-brands.svg" class="logo_3">
+                        <div class="title">
+                            <h2 class="title_j">JS</h2>
+                        </div>
+                        <div class="descri">
+                            <p class="descri_j">Le JavaScript est donc lui le premier language de programmation que j'ai
+                                appris qui est reconnu comme un language de
+                                programmation. Il m'a été asser dur à apprendre, et même encore aujourd'hui je ne pense
+                                connaître que peu des
+                                fonctions que propose JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="containers">
+                    <div class="other-card" onclick="change_card()">
+                        <div class="circle_o"></div>
+                        <img src="code-solid.svg" class="logo_4">
+                        <div class="title">
+                            <h2 class="title_o">Autres</h2>
+                        </div>
+                        <div class="descri">
+                            <p class="descri_o">Avant d'apprendre ces languages de web developpement j'avais déjà
+                                utilisé des languages comme Python que je n'est
+                                que très rarement utiliser. Au lycée j'ai aussi apris le language Arduino, je l'ai plus
+                                souvent utilisé que
+                                Python mais je ne l'utilise quand même pas chez moi quand je m'amuse à programmer. Ces
+                                vrai languages de
+                                programmation m'intéresse beaucoup même si il m'arrive rarement de les utiliser.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="jeux">
+            <button class="buton" onClick="game()">Jouer</button>
+        </div>
+        <div id="contact">
+            <div class="bas-bas">
+                <div class="name">
+                    <p class="nom">Dorian</p>
+                </div>
+                <p class="tag">Site imaginé et développé par Dorian Faure</p>
+                <p class="mail">Mon mail : dorianf.develop@gmail.com</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

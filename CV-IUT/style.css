@@ -1,0 +1,1394 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("Roboto/Roboto-Regular.ttf");
+}
+
+body{
+    background-color: white; /*#0c0c0c*/
+    font-family: Roboto;
+}
+
+.competence{
+    display:block;
+    width:100;
+    color:black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.competence .haut-page{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.competence .haut-page h2{
+    border-bottom:1px solid rgb(73, 73, 73);
+}
+
+.competence .haut-page .nom{
+    font-size: 2.8rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all 0.5s ease;
+    color:rgb(73, 73, 73);
+}
+.competence .haut-page .nom:hover{
+    font-size: 3.4rem;
+}
+
+.competence .haut-page .hamburger{
+    position:absolute;
+    left:2%;
+    top:1%;
+    position: fixed;
+    font-size: 3rem;
+}
+.competence .haut-page .burger_img{
+    width:60px;
+    height:60px;
+    margin-top:15px;
+}
+.competence .haut-page .hamburger:hover{
+    color:rgba(0, 0, 0, 0.548);
+}
+
+.competence .haut-page .hamburger:active{
+    color:rgb(0, 0, 0);
+}
+
+.competence .menu{
+    position:fixed;
+    display: none;
+    flex-direction: column;
+    border:1px solid black;
+    border-radius: 5px;
+    top: 1.5rem;
+    left:90px;
+    z-index: 2;
+    padding:5px 5px;
+    background-color: rgba(255, 255, 255, 0.548);
+}
+
+.competence .menu h1{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.342);
+}
+
+.competence .menu a{
+    text-decoration: none;
+    color:black;
+    text-align:left;
+    margin-right:15px;
+}
+
+.competence .menu a .m-presentation{
+    margin-bottom:15px;
+}
+
+.competence .menu a .m-parcour{
+    margin-bottom:15px;
+}
+
+.competence .menu a:hover{
+    color:rgba(0, 0, 0, 0.555);
+}
+
+.competence .menu a:active{
+    color:rgba(0, 0, 0, 0.849);
+}
+
+.competence #infos{
+    width:100%;
+    display:flex;
+    font-size:1rem;
+    flex-direction: column;
+    align-items: center;
+    padding-top:2rem;
+    margin-bottom: 50px;
+}
+
+.competence #infos .origine{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.competence #infos .origine .title{
+    color:rgb(39, 37, 61);
+    font-family: "Roboto";
+    font-size: 1.7rem;
+    margin-left:6.5%;
+}
+
+
+.competence #infos .origine .text{
+    width:40%;
+    color:#55555e;
+    position: relative;
+    margin-top:20px;
+    left:6%;
+    padding:0.7rem;
+    text-shadow: .5px 0.5px 5px #45454511;
+}
+.competence #infos .programmation{
+    width:100%;
+}
+
+.competence #infos .programmation .title{
+    color:rgb(39, 37, 61);
+    font-family: "Roboto";
+    font-size: 1.7rem;
+    width:25%;
+    margin-left:60%;
+}
+
+
+.competence #infos .programmation .text{
+    width:45%;
+    color:#55555e;
+    position: relative;
+    margin-top:20px;
+    left:50%;
+    padding:0.7rem;
+    text-shadow: .5px 0.5px 5px #45454511;
+}
+
+.competence #infos .programmation .text-2{
+    width:47%;
+    color:#55555e;
+    position: relative;
+    margin-top:20px;
+    left:50%;
+    padding:0.7rem;
+    text-shadow: .5px 0.5px 5px #45454511;
+    text-align: left;
+}
+
+.competence #infos .programmation .text-3{
+    width:65%;
+    color:#55555e;
+    position: relative;
+    margin-top:20px;
+    left:20%;
+    padding:0.7rem;
+    text-shadow: .5px 0.5px 5px #45454511;
+    text-align: center;
+}
+
+.competence #infos .futur .text{
+    width:70%;
+    color:#55555e;
+    position: relative;
+    margin-top:20px;
+    left:15%;
+    padding:0.7rem;
+    text-shadow: .5px 0.5px 5px #45454511;
+    text-align: center;
+    margin-bottom:50px;
+}
+
+.competence #infos .futur .title{
+    color:rgb(39, 37, 61);
+    font-family: "Roboto";
+    font-size: 1.7rem;
+    margin-top:20px;
+    width:100%;
+    text-align: center;
+}
+
+.competence #presentation{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10vh;
+    padding-top:2rem;
+}
+
+.competence #presentation .bloc{
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+
+.competence #presentation .title{
+    width:20%;
+    font-family: "Roboto";
+    font-size: 1.7rem;
+    color:rgb(39, 37, 61);
+    margin-bottom: 15px;
+}
+
+.competence #presentation .text{
+    width:30%;
+    color:#55555e;
+    margin-top:20px;
+    margin-left:20%;
+}
+
+.competence #presentation .text p{
+    text-shadow: .5px 0.5px 5px #45454511;
+    margin-top:25px;
+}
+
+
+.competence #presentation .photo{
+    width:20%;
+    opacity: 0.98;
+    border-radius: 30px;
+    box-shadow: 1px 1px 3px rgba(24, 24, 24, 0.925);
+    box-shadow: 1px 1px 9px rgba(24, 24, 24, 0.325);
+    margin-left:5%;
+}
+
+.competence #infos .xp{
+    width:70%;
+    margin-left:8%;
+}
+
+.competence #infos .xp .text{
+    width:70%;
+    color:#55555e;
+    position: relative;
+    margin-top:20px;
+    padding:0.7rem;
+    text-shadow: .5px 0.5px 5px #45454511;
+    margin-bottom:100px;
+}
+
+.competence #infos .xp .title{
+    color:rgb(39, 37, 61);
+    font-family: "Roboto";
+    font-size: 1.7rem;
+    margin-top:20px;
+    width:100%;
+}
+
+.competence #infos .capa{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    color:rgb(39, 37, 61);
+    font-family: "Roboto";
+    margin-bottom:40px;
+    list-style: inside;
+    text-align: center;
+}
+
+.competence #infos .capa .points-fort{
+    width:40%;
+    color:#55555e;
+    text-shadow: .5px 0.5px 5px #45454511;
+    border-right:1px solid black;
+    margin-left:10%;
+    padding:15px;
+}
+
+.competence #infos .capa .points-fort .title{
+    text-align:center;
+    color:rgb(39, 37, 61);
+    margin-bottom:40px;
+}
+
+.competence #infos .capa .points-faible{
+    width:40%;
+    color:#55555e;
+    text-shadow: .5px 0.5px 5px #45454511;
+    border-left:1px solid black;
+    padding:15px;
+}
+
+.competence #infos .capa .points-faible .title{
+    text-align:center;
+    color:rgb(39, 37, 61);
+    margin-bottom:40px;
+}
+
+.competence #infos .capa ul{
+    margin-left:35px;
+}
+
+.competence #infos .capa li{
+    margin-bottom:30px;
+    margin-right:35px;
+}
+
+.competence #infos .capa ul span{
+    font-weight: bold;
+}
+
+
+.competence #skills{
+    width:100%;
+    margin-bottom:80px;
+}
+
+.competence #skills .cards{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color:rgb(39, 37, 61);
+    font-family: "Roboto";
+}
+
+.competence #skills .cards .containers{
+    width:22%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:10px 0;
+    transition: all 0.4s ease;
+    transform: perspective(400px);
+}
+
+.competence #skills .cards .containers:hover{
+    transform:perspective(400px) translateZ(35px);
+}
+
+
+.competence #skills .html-card{
+    width:80%;
+    height:500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.competence #skills .html-card .circle_h {
+    width: 8rem;
+    height: 8rem;
+    background: linear-gradient(
+        to right,
+         rgba(9, 150, 231, 0.85),
+         rgba(126, 7, 126, 0.85)
+    );
+    z-index: 1;
+    position: absolute;
+    top:40px;
+    border-radius: 50%;
+}
+
+.competence #skills .html-card .logo_1{
+    position: absolute;
+    width:7rem;
+    top:40px;
+    z-index:2;
+}
+
+.competence #skills .html-card .title{
+    font-size: 1.6rem;
+    position: absolute;
+    top:180px;
+}
+
+.competence #skills .html-card .descri{
+    padding:5px 15px;
+    text-align: center;
+    font-size:0.9rem;
+    position: absolute;
+    height:270px;
+    top:230px;
+    display: flex;
+    align-items: center;
+}
+
+.competence #skills .css-card{
+    width:80%;
+    height:500px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    perspective: 10px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.competence #skills .css-card .circle_c {
+    width: 8rem;
+    height: 8rem;
+    background: linear-gradient(
+        to right,
+         rgba(9, 150, 231, 0.85),
+         rgba(126, 7, 126, 0.85)
+    );
+    z-index: 1;
+    position: absolute;
+    top:40px;
+    border-radius: 50%;
+}
+
+.competence #skills .css-card .logo_2{
+    position: absolute;
+    width:7rem;
+    top:40px;
+    z-index:2;
+}
+
+.competence #skills .css-card .title{
+    font-size: 1.6rem;
+    position: absolute;
+    top:180px;
+}
+
+.competence #skills .css-card .descri{
+    padding:5px 15px;
+    text-align: center;
+    font-size:0.9rem;
+    position: absolute;
+    height:270px;
+    top:230px;
+    display: flex;
+    align-items: center;
+}
+
+.competence #skills .js-card{
+    width:80%;
+    height:500px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    perspective: 10px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.competence #skills .js-card .circle_j {
+    width: 8rem;
+    height: 8rem;
+    background: linear-gradient(
+        to right,
+         rgba(9, 150, 231, 0.85),
+         rgba(126, 7, 126, 0.85)
+    );
+    z-index: 1;
+    position: absolute;
+    top:40px;
+    border-radius: 50%;
+}
+
+.competence #skills .js-card .logo_3{
+    position: absolute;
+    width:7rem;
+    top:40px;
+    z-index:2;
+}
+
+.competence #skills .js-card .title{
+    font-size: 1.6rem;
+    position: absolute;
+    top:180px;
+}
+
+.competence #skills .js-card .descri{
+    padding:5px 15px;
+    text-align: center;
+    font-size:0.9rem;
+    position: absolute;
+    height:270px;
+    top:230px;
+    display: flex;
+    align-items: center;
+}
+
+.competence #skills .other-card{
+    width:80%;
+    height:500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 10px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.competence #skills .other-card .circle_o {
+    width: 8rem;
+    height: 8rem;
+    background: linear-gradient(
+        to right,
+         rgba(9, 150, 231, 0.85),
+         rgba(126, 7, 126, 0.85)
+    );
+    z-index: 1;
+    position: absolute;
+    top:40px;
+    border-radius: 50%;
+}
+
+.competence #skills .other-card .logo_4{
+    position: absolute;
+    width:10rem;
+    top:40px;
+    z-index:2;
+}
+
+.competence #skills .other-card .title{
+    font-size: 1.6rem;
+    position: absolute;
+    top:180px;
+}
+
+.competence #skills .other-card .descri{
+    padding:5px 15px;
+    text-align: center;
+    font-size:0.9rem;
+    position: absolute;
+    height:270px;
+    top:230px;
+    display: flex;
+    align-items: center;
+}
+
+.competence .click{
+    width:100%;
+    margin-bottom:25px;
+    z-index:2;
+    display: flex;
+    align-items: center;
+}
+
+.competence .click img{
+    width:2%;
+    transform: perspective(500px) rotateZ(-45deg);
+    margin-left:5%;
+    margin-right:2%;
+    opacity: 0.8;
+}
+
+.competence .click p{
+    color:rgba(94, 94, 94, 0.747);
+}
+
+.competence .trop-petit{
+    width:100%;
+    height:100vh;
+    background-color: white;
+    z-index: 4;
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size:4.5rem;
+    text-align:center;
+}
+
+#contact{
+    width:100%;
+    display: felx;
+}
+
+#contact .bas-bas{
+    width:100%;
+    background:rgb(95, 95, 95);
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#contact .bas-bas .name{
+    height:100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:100px;
+    transition: all 0.45s ease-in;
+}
+
+#contact .bas-bas .name:hover{
+    transform: perspective(500px) translateZ(75px);
+}
+
+#contact .bas-bas .nom{
+    font-size: 2.8rem;
+    color:white;
+    font-family:"Roboto";
+    transition: all 0.5s ease;
+    text-shadow: 0.5px 0.5px 2px rgba(26, 26, 26, 0.842);
+}
+
+
+#contact .bas-bas .tag{
+    font-size: 1rem;
+    color:white;
+    transition: all 0.5s ease;
+    margin-left:100px;
+    color:rgb(163, 163, 163);
+    font-family: "Roboto";
+    position:absolute;
+    right:20px;
+    top:75px;
+}
+
+#contact .bas-bas .mail{
+    color:rgb(214, 214, 214);
+    text-shadow: 0.5px 0.5px 2px rgba(26, 26, 26, 0.842);
+    font-family:sans-serif;
+    font-size:120%;
+}
+.competence #jeux{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:60px;
+}
+.competence #jeux .buton{
+    border:none;
+    color:rgb(49, 49, 49);
+    padding:5px 10px;
+    font-size:2rem;
+    font-family: "Roboto";
+    background:rgba(226, 226, 226, 0.534);
+    box-shadow: 1px 1px 5px rgb(48, 48, 48);
+    border-radius:8px;
+}
+.competence #jeux .buton:hover{
+    color:rgb(45,45,45);
+    background:rgba(216, 216, 216, 0.534);
+    cursor: pointer;
+}
+.competence #jeux .buton:focus{
+    outline:none;
+}
+/*-------------------JEUX-------------------*/
+.game{
+    width:100%;
+    height:100vh;
+    position: fixed;
+    background:rgba(41, 41, 41, 0.222);
+    z-index:100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.game .fenetre{
+    width:85%;
+    height:80vh;
+    background:white;
+    box-shadow: 1px 1px 3px rgba(61, 61, 61, 0.575);
+    box-shadow: 1px 1px 8px rgba(61, 61, 61, 0.375);
+    position: relative;
+    border-radius:2px;
+}
+
+.game .fenetre .croix{
+    position: absolute;
+    right:0%;
+    top:0%;
+}
+
+.game .fenetre .croix img{
+    width:25px;
+    height:25px;
+}
+
+.game .fenetre .croix:hover{
+    cursor: pointer;
+}
+
+.game .fenetre .choix-jeu{
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.game .fenetre .choix-jeu .enigme, .mini-jeu{
+    width:30%;
+    height:90%;
+    border-radius:25px;
+    box-shadow: 1px 1px 6px rgba(44, 44, 44, 0.795);
+    box-shadow: 1px 1px 12px rgba(44, 44, 44, 0.432);
+    display: flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    transition:all 0.2s ease;
+    transform: perspective(500px);
+}
+
+.game .fenetre .choix-jeu h1{
+    font-family: sans-serif;
+    color:rgb(24, 24, 24);
+    position: absolute;
+    margin-top:75%;
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px rgb(48, 48, 48, 0.8);
+    text-shadow: 1px 1px 6px rgb(48, 48, 48, 0.3);
+}
+
+.game .fenetre .choix-jeu .enigme{
+    background:linear-gradient(to bottom left, rgb(255, 255, 255), rgb(133, 133, 133));
+}
+
+.game .fenetre .choix-jeu .enigme:hover{
+    transform: perspective(500px) translateZ(15px);
+    cursor: pointer;
+}
+
+.game .fenetre .choix-jeu .mini-jeu{
+    background:linear-gradient(to bottom right, rgb(255, 255, 255), rgb(133, 133, 133));
+}
+
+.game .fenetre .choix-jeu .mini-jeu:hover{
+    transform: perspective(500px) translateZ(8px);
+    cursor: pointer;
+}
+
+.game .fenetre .choix-jeu .affichage{
+    display: flex;
+    color:rgb(24, 24, 24);
+    font-size: 2rem;
+}
+
+.game .fenetre .choix-jeu .mini-jeu .affichage .best-score-affiche{
+    margin-left:15px;
+}
+
+.game .fenetre .choix-jeu .mini-jeu .affichage h2{
+    text-shadow: 1px 1px 2px rgb(48, 48, 48, 0.8);
+    text-shadow: 1px 1px 6px rgb(48, 48, 48, 0.3);
+}
+
+.game .fenetre .choix-jeu .enigme .affichage h2{
+    text-shadow: 1px 1px 2px rgb(48, 48, 48, 0.8);
+    text-shadow: 1px 1px 6px rgb(48, 48, 48, 0.3);
+    color:rgb(37, 37, 37);
+    font-size: 6rem;
+    transform: rotateZ(5deg);
+}
+
+/*ENIGME - 1*/
+#enigme-1{
+    width:100%;
+    height:100%;
+    font-family:Arial;
+    display:none;
+}
+
+#enigme-1 .chiffres{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:0 100px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+#enigme-1 .chiffres .b{
+    font-size:10rem;
+    font-weight: 900;
+    color:rgb(41, 41, 41);
+    text-shadow: 1px 1px 5px rgba(14, 14, 14, 0.715);
+    text-shadow: 1px 1px 10px rgba(14, 14, 14, 0.315);
+}
+#enigme-1 .chiffres .b:hover{
+    cursor:pointer;
+}
+
+#enigme-1 .indice{
+    font-family: serif;
+    border:1px solid black;
+    box-shadow: 1px 1px 3px rgb(17, 17, 17, 0.777);
+    box-shadow: 1px 1px 6px rgba(17, 17, 17, 0.377);
+    width:2rem;
+    text-align: center;
+    margin-top: 15px;
+    margin-left:15px;
+}
+#enigme-1 .indice:hover{
+    cursor: default;
+}
+
+#enigme-1 h3{
+    text-align: center;
+    font-size:1.4rem;
+    color:rgb(17, 17, 17, 0.877);
+}
+
+#enigme-1 .aide-1{
+    margin-top: 15px;
+    color:rgb(17, 17, 17, 0.717)
+}
+
+/*ENIGME-2*/
+
+#enigme-2{
+    width:100%;
+    height:100%;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#enigme-2 .infos{
+    width:50%;
+    box-shadow: 1px 1px 3px rgb(19, 19, 19, 0.8);
+    box-shadow: 1px 1px 8px rgb(19, 19, 19, 0.4);
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 3rem;
+    color:rgba(14, 14, 14, 0.915);
+    opacity: 0.85;
+}
+
+#enigme-2 .infos h2{
+    text-align: center;
+}
+
+#enigme-2 .sollution{
+    width:30%;
+    box-shadow: 1px 1px 3px rgb(19, 19, 19, 0.8);
+    box-shadow: 1px 1px 8px rgb(19, 19, 19, 0.4);
+    padding: 15px 25px;
+    display: flex;
+    justify-content:space-evenly;
+    padding:5px 5px;
+}
+
+#enigme-2 .sollution .code{
+    width:30%;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.85;
+}
+
+#enigme-2 .sollution .fleche{
+    width:50px;
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+#enigme-2 .sollution .affichage{
+    width:75px;
+    height:75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    color:rgba(14, 14, 14, 0.915);
+    box-shadow: 1px 1px 3px rgb(19, 19, 19, 0.8);
+    box-shadow: 1px 1px 8px rgb(19, 19, 19, 0.4);
+}
+
+#enigme-3{
+    width:100%;
+    height:100%;
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#enigme-3 .txt{
+    width:50%;
+    text-align: center;
+    position: absolute;
+    top:50px;
+}
+
+#enigme-3 .reponses{
+    position: absolute;
+    top:300px;
+    display:flex;
+}
+
+#enigme-3 .reponses h3{
+    margin-right:25px;
+    color:rgba(14, 14, 14, 0.915);
+}
+
+#enigme-3 .reponses .reponse_3{
+    padding: 2px 2px;
+}
+
+#bravo{
+    width:100%;
+    height:100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#bravo .txt{
+    text-align: center;
+    color:rgba(39, 37, 37, 0.87);
+    font-family: monospace;
+    font-size: 2rem;
+}
+
+#bravo .suivant{
+    cursor: pointer;
+    border-radius:5px;
+    box-shadow: 1px 1px 3px rgba(31, 31, 31, 0.897);
+    box-shadow: 1px 1px 7px rgba(31, 31, 31, 0.497);
+    padding:5px 5px;
+    position: absolute;
+    bottom:50px;
+    color:rgb(51, 51, 51);
+}
+
+#bravo .suivant:active{
+    color:rgb(31, 31, 31);
+}
+
+
+/*---------------------------JEU-------------------------*/
+
+#jeu{
+    width:100%;
+    height:100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+
+#jeu .zone-jeu{
+    width:40%;
+    height:100%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.729);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.329);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(221, 221, 221, 0.125);
+}
+
+#jeu .zone-jeu .lignes{
+    width:25%;
+    height:100%;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.129);
+    background-color: white;
+}
+
+#jeu .zone-jeu .lignes .blocks{
+    position: absolute;
+    top:-200px;
+    width:25%;
+    height:190px;
+    transition-timing-function: linear;
+    color:rgb(20, 20, 20);
+    background-color: rgb(20, 20, 20);
+    border-radius:8px;
+}
+
+#jeu .zone-jeu .player{
+    color:rgba(197, 6, 6, 0.76);
+    background-color: rgba(197, 6, 6);
+    border-radius:5px;
+    height:50px;
+    width:40px;
+    position:absolute;
+    left:50%;
+    top:60%;
+    transform: translateX(-50%);
+    transition: all 0.09s ease;
+}
+
+#jeu .score{
+    position:absolute;
+    min-width:100px;
+    height:3rem;
+    font-size: 2rem;
+    padding:0.5rem 50px;
+    box-shadow: 1px 1px 4px rgb(39, 39, 39, 0.85);
+    box-shadow: 1px 1px 8px rgb(39, 39, 39, 0.45);
+    right:25px;
+    top:25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+}
+
+#jeu .instruction{
+    position: absolute;
+    top:20px;
+    left:0;
+    color:rgba(51, 51, 51, 0.664);
+    width:30%;
+    text-align: center;
+    font-size:0.9rem;
+}
+#jeu .instruction p{
+    width:80%;
+    margin-left:10%;
+}
+
+#jeu .zone-jeu .perdu{
+    color:red;
+    position:absolute;
+    font-size:7rem;
+    opacity: 0;
+    top:30%;
+}
+
+#jeu .best-score{
+    position:absolute;
+    min-width:100px;
+    height:3rem;
+    font-size: 2rem;
+    padding:0.5rem 50px;
+    box-shadow: 1px 1px 4px rgb(39, 39, 39, 0.85);
+    box-shadow: 1px 1px 8px rgb(39, 39, 39, 0.45);
+    right:25px;
+    bottom:25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+}
+
+#jeu .bouttons{
+    display:flex;
+    width:30%;
+    position:absolute;
+    justify-content: space-evenly;
+    top:250px;
+    left:0;
+}
+
+#jeu .bouttons div{
+    box-shadow: 1px 1px 8px rgb(39, 39, 39, 0.45);
+    padding:5px 5px;
+    cursor:pointer;
+    color:rgba(37, 37, 37, 0.781);
+}
+
+#jeu .bouttons div:active{
+    color:rgba(37, 37, 37, 0.981);
+}
+
+#jeu .bouttons .moyen{
+    background-color: rgba(231, 231, 231, 0.77);
+}
+
+.retour{
+    position: absolute;
+    padding:5px 5px;
+    left:25px;
+    bottom:20px;
+    cursor:pointer;
+    color:rgba(37, 37, 37, 0.781);
+    box-shadow: 1px 1px 8px rgb(39, 39, 39, 0.45);
+}
+
+.retour:active{
+    color:rgba(37, 37, 37, 0.981);
+}
+
+/*RESPONSIVE*/
+@media screen and (min-width:3000px){
+    .competence .trop-petit{
+        display:flex;
+    }
+}
+@media screen and (min-width:1800px){
+    .competence .haut-page .nom{
+        font-size: 4rem;
+    }
+    .competence #infos{
+        font-size:1.6rem;
+    }
+    .competence #infos .programmation .title{
+        font-size:2.6rem;
+    }
+    .competence #infos .origine .title{
+        font-size:2.6rem;
+    }
+    .competence #infos .futur .title{
+        font-size:2.6rem;
+    }
+    .competence #infos .capa .title{
+        font-size:2.6rem;
+    }
+    .competence #infos .xp .title{
+        font-size:2.6rem;
+    }
+    .competence #presentation .text{
+        font-size:1.6rem;
+    }
+    .competence #presentation .title{
+        font-size:2.6rem;
+    }
+    .competence #skills .cards .descri{
+        font-size: 1.25rem;
+        top:280px;
+        height:400px;
+    }
+    .competence #skills .html-card{
+        height:680px;
+    }
+    .competence #skills .css-card{
+        height:680px;
+    }
+    .competence #skills .js-card{
+        height:680px;
+    }
+    .competence #skills .other-card{
+        height:680px;
+    }
+    .competence #skills .html-card .circle_h{
+        width:10rem;
+        height:10rem;
+    }
+    .competence #skills .html-card .logo_1{
+        width:9rem;
+    }
+    .competence #skills .html-card .title{
+        font-size: 2.2rem;
+        top:220px;
+    }
+    .competence #skills .css-card .circle_c{
+        width:10rem;
+        height:10rem;
+    }
+    .competence #skills .css-card .logo_2{
+        width:9rem;
+    }
+    .competence #skills .css-card .title{
+        font-size: 2.2rem;
+        top:220px;
+    }
+    .competence #skills .js-card .circle_j{
+        width:10rem;
+        height:10rem;
+    }
+    .competence #skills .js-card .logo_3{
+        width:9rem;
+    }
+    .competence #skills .js-card .title{
+        font-size: 2.2rem;
+        top:220px;
+    }
+    .competence #skills .other-card .circle_o{
+        width:10rem;
+        height:10rem;
+    }
+    .competence #skills .other-card .logo_4{
+        width:12.5rem;
+    }
+    .competence #skills .other-card .title{
+        font-size: 2.2rem;
+        top:220px;
+    }
+    #contact .bas-bas .mail{
+        font-size:160%;
+    }
+}
+@media screen and (max-width:1400px){
+    .competence #skills .cards .descri{
+        font-size: 0.8rem;
+    }
+    #enigme-1 .chiffres .b{
+        font-size:8rem;
+    }
+    #enigme-2 .infos{
+        font-size: 2.7rem;
+    }
+}
+
+@media screen and (max-width:1130px){
+    .competence #skills .cards .descri{
+        font-size: 0.75rem;
+    }
+    #enigme-1 .chiffres .b{
+        font-size:6rem;
+    }
+    #enigme-2 .infos{
+        font-size: 2.3rem;
+    }
+}
+@media screen and (max-width:1000px){
+    .competence .click img{
+        width:6%;
+        margin-left:15%;
+    }
+    .competence .click{
+        font-size: 1.8rem;
+    }
+    .competence #skills .cards{
+        flex-direction: column;
+    }
+    .competence #skills .css-card{
+        display:none;
+    }
+    .competence #skills .js-card{
+        display:none;
+    }
+    .competence #skills .other-card{
+        display:none;
+    }
+    .competence #skills .cards .containers{
+        width:340px;
+    }
+    .competence #skills .cards .descri{
+        font-size: 0.95rem;
+    }
+    .competence #infos .origine .title{
+        width:100%;
+        margin-left:0;
+        text-align: center;
+    }
+    .competence #infos .origine .text{
+        width:100%;
+        left:0;
+        text-align: center;
+    }
+    .competence #infos .programmation .title{
+        width:100%;
+        margin-left:0;
+        margin-top:50px;
+        text-align: center;
+    }
+    .competence #infos .programmation .text-2{
+        width:100%;
+        left:0;
+        text-align: center;
+    }
+    .competence #infos .programmation .text-3{
+        width:100%;
+        left:0;
+        text-align: center;
+    }
+    .competence #infos .futur .title{
+        width:100%;
+        margin-left:0;
+        margin-top:50px;
+        text-align: center;
+    }
+    .competence #infos .futur .text{
+        width:100%;
+        left:0;
+        text-align: center;
+    }
+    .competence #infos .xp{
+        width:100%;
+        text-align: center;
+        margin:0;
+    }
+    .competence #infos .xp .title{
+        width:100%;
+        margin-left:0;
+        text-align: center;
+    }
+    .competence #infos .xp .text{
+        width:100%;
+        left:0;
+        text-align: center;
+        font-size:
+    }
+    .competence #infos .capa{
+        flex-direction: column;
+        text-align: center;
+    }
+    .competence #infos .capa .points-fort{
+        border:none;
+        width:100%;
+        margin-left: 0;
+    }
+    .competence #infos .capa .points-faible{
+        border:none;
+        width:100%;
+        margin-left: 0;
+    }
+    .competence #presentation .title{
+        width:100%;
+        text-align:center;
+    }
+    .competence #presentation .bloc{
+        flex-direction: column;
+    }
+    .competence #presentation .text{
+        width:100%;
+        margin-left:0;
+        text-align: center;
+    }
+    .competence #presentation .photo{
+        width:40%;
+        margin-top:50px;
+        border-radius: 15px;
+    }
+    #contact .bas-bas .nom{
+        font-size: 0;
+    }
+    #contact .bas-bas .tag{
+        left:-90px;
+    }
+    .competence #jeux{
+        display: none;
+    }
+    .game{
+        display:none;
+    }
+    .fenetre{
+        display: none;
+    }
+    .competence #skills .cards .containers{
+        width:70%;
+    }
+    .competence #skills .cards .html-card{
+        height:1100px;
+        width:90%;
+        border-radius: 40px;
+        margin-top:80px;
+    }
+    .competence #skills .html-card .title{
+        font-size: 3.6rem;
+        top:310px;
+    }
+    .competence #skills .cards .descri{
+        font-size: 2.3rem;
+        top:580px;
+    }
+    .competence #skills .html-card .circle_h {
+        width: 15rem;
+        height: 15rem;
+    }
+    .competence #skills .html-card .logo_1{
+        width:13rem;
+    }
+}
+@media screen and (max-width:600px){
+    .competence .click img{
+        width:6%;
+        margin-left:15%;
+    }
+    .competence #infos{
+        font-size:0.8rem;
+    }
+    .competence .haut-page .hamburger{
+        display:none;
+    }
+    #contact .bas-bas .nom{
+        font-size: 0;
+    }
+}
